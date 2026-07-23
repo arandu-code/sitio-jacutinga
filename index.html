@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oportunidade Única - Sítio em Jacutinga</title>
+    <title>Oportunidade Única - Sítio em Jacutinga/MG</title>
     
     <meta name="copyright" content="© 2026 Arandu Tecnologia">
     <meta name="author" content="Arandu Tecnologia">
@@ -15,7 +15,7 @@
             --verde-escuro: #2d4f1e;
             --verde-claro: #5a8a47;
             --terra: #8c6239;
-            --gelo: #f4f7f1;
+            --fundo-quente: #fdf7eb; /* Creme vibrante e quente, substituindo o cinza/gelo */
             --texto: #333;
         }
 
@@ -23,14 +23,15 @@
             font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--gelo);
+            background-color: var(--fundo-quente);
             color: var(--texto);
             line-height: 1.6;
         }
 
         header {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/img001.jpg') no-repeat center center/cover;
-            height: 80vh;
+            /* Imagem de fundo apontando para img/ */
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/img001.png') no-repeat center center/cover;
+            height: 50vh; /* ALTURA REDUZIDA: era 80vh, agora ocupa 50% da tela */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -46,10 +47,10 @@
         .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
 
         .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px; }
-        .feature-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid var(--verde-claro); }
+        .feature-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 5px solid var(--verde-claro); }
 
-        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-bottom: 50px; }
-        .gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; transition: transform 0.3s; cursor: pointer; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-bottom: 50px; }
+        .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; transition: transform 0.3s; cursor: pointer; }
         .gallery img:hover { transform: scale(1.05); }
 
         .cta-section { background-color: var(--verde-escuro); color: white; text-align: center; padding: 60px 20px; border-radius: 15px; }
@@ -70,15 +71,16 @@
         footer { 
             text-align: center; 
             padding: 40px 20px; 
-            font-size: 0.85rem; 
-            color: #666; 
-            background-color: #e9eee5; 
+            font-size: 0.9rem; 
+            color: white; /* Texto branco */
+            background-color: var(--verde-claro); /* Fundo verde vibrante substituindo o cinza */
             margin-top: 50px;
         }
-        .copyright-brand { font-weight: bold; color: var(--verde-escuro); }
+        .copyright-brand { font-weight: bold; color: #fff; }
 
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
+            header { height: 40vh; } /* Ainda menor no celular para melhor visualização */
         }
     </style>
 </head>
@@ -86,40 +88,39 @@
 
 <header id="inicio">
     <div class="badge">Oportunidade de Investimento</div>
-    <h1>Sítio de 4 Alqueires em Jacutinga</h1>
-    <p style="font-size: 1.3rem;">A tranquilidade do campo com potencial urbano real.</p>
+    <h1>Sítio de 6.08 Alqueires em Jacutinga/MG</h1>
+    <p style="font-size: 1.3rem;">Excelente localização, a apenas 5 km da cidade.</p>
 </header>
 
 <div class="container">
     <section class="features">
         <div class="feature-box">
-            <h3>Localização Privilegiada</h3>
-            <p>Situado na região de Jacutinga, com fácil acesso e cercado por belezas naturais. Ideal para quem busca sossego ou lazer.</p>
+            <h3>Excelente Localização</h3>
+            <p>Situado a apenas <strong>5 km de Jacutinga/MG</strong>, combinando a tranquilidade e o sossego do campo com a conveniência de estar bem pertinho da cidade.</p>
         </div>
         <div class="feature-box">
             <h3>Apto para Loteamento</h3>
             <p><strong>Destaque:</strong> Área com excelente topografia e documentação em ordem, totalmente pronta para projetos de loteamento ou empreendimentos rurais.</p>
         </div>
         <div class="feature-box">
-            <h3>4 Alqueires de Terra</h3>
-            <p>Amplo espaço para agricultura, pecuária ou desenvolvimento de um condomínio de chácaras exclusivo.</p>
+            <h3>6.08 Alqueires de Terra</h3>
+            <p>Amplo espaço (aproximadamente 14,7 hectares) ideal para agricultura, pecuária, lazer ou desenvolvimento de um condomínio de chácaras exclusivo.</p>
         </div>
     </section>
 
-    <h2 style="text-align: center; margin-bottom: 30px;">Galeria de Fotos</h2>
+    <h2 style="text-align: center; margin-bottom: 30px; color: var(--verde-escuro);">Galeria de Fotos</h2>
     <section class="gallery">
-        <img src="img/img001.jpg" alt="Vista do Sítio 1">
-        <img src="img/img002.jpg" alt="Vista do Sítio 2">
-        <img src="img/img003.jpg" alt="Vista do Sítio 3">
-        <img src="img/img004.jpg" alt="Vista do Sítio 4">
-        <img src="img/img005.jpg" alt="Vista do Sítio 5">
+        <img src="img/img001.png" alt="Vista do Sítio 1">
+        <img src="img/img002.png" alt="Vista do Sítio 2">
+        <img src="img/img003.png" alt="Vista do Sítio 3">
+        <img src="img/img004.png" alt="Vista do Sítio 4">
     </section>
 
     <section class="cta-section">
-        <h2>Ficou interessado neste imóvel?</h2>
-        <p>Entre em contato agora para mais detalhes, fotos adicionais ou agendar uma visita.</p>
+        <h2>Ficou interessado nesta propriedade?</h2>
+        <p>Entre em contato agora para mais detalhes, fotos adicionais ou para agendar uma visita.</p>
         <p style="font-size: 1.5rem; margin-top: 10px;"><strong>Glaucia: (19) 99244-9760</strong></p>
-        <a href="https://wa.me/5519992449760?text=Olá%20Glaucia,%20vi%20o%20anúncio%20do%20sítio%20em%20Jacutinga%20e%20gostaria%20de%20mais%20informações." class="whatsapp-btn" target="_blank">
+        <a href="https://wa.me/5519992449760?text=Olá%20Glaucia,%20vi%20o%20anúncio%20do%20sítio%20de%206.08%20alqueires%20em%20Jacutinga%20e%20gostaria%20de%20mais%20informações." class="whatsapp-btn" target="_blank">
             Falar no WhatsApp
         </a>
     </section>
